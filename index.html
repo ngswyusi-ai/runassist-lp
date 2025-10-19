@@ -9,6 +9,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            min-width: 0;
+        }
+        
+        html {
+            min-width: 375px;
+            overflow-x: auto;
         }
         
         body {
@@ -17,12 +23,18 @@
             color: #333;
             word-break: keep-all;
             overflow-wrap: break-word;
+            min-width: 375px;
         }
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
+            min-width: 375px;
+        }
+        
+        section {
+            min-width: 375px;
         }
         
         p, h1, h2, h3, h4 {
@@ -442,15 +454,11 @@
                 padding: 15px 35px;
                 font-size: 1.1em;
             }
-            
-            .sp-br {
-                display: inline;
-            }
         }
         
-        @media (min-width: 769px) {
-            .sp-br {
-                display: none;
+        @media (max-width: 374px) {
+            html, body, .container, section {
+                min-width: 375px;
             }
         }
     </style>
@@ -470,7 +478,7 @@
     <!-- 悩みセクション -->
     <section class="problems">
         <div class="container">
-            <h2 class="section-title">こんなお悩み<br class="sp-br">ありませんか？</h2>
+            <h2 class="section-title">こんなお悩みありませんか？</h2>
             <div class="problem-list">
                 <div class="problem-item">運動が苦手で体育の時間が憂鬱そう...</div>
                 <div class="problem-item">習い事を始めたいけど厳しすぎると続かないかも</div>
@@ -484,7 +492,7 @@
     <!-- 特徴セクション -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">RUN ASSISTの<br class="sp-br">3つの特徴</h2>
+            <h2 class="section-title">RUN ASSISTの3つの特徴</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">😊</div>
@@ -493,7 +501,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👫</div>
-                    <h3>学校を超えた<br>仲間づくり</h3>
+                    <h3>学校を超えた仲間づくり</h3>
                     <p>いろんな学校の友達と出会える！年1回のクラブ内運動会やクリスマス会など、イベントも盛りだくさん。</p>
                 </div>
                 <div class="feature-card">
@@ -684,7 +692,7 @@
     <!-- 最終CTAセクション -->
     <section class="final-cta" id="form">
         <div class="container">
-            <h2>まずは無料体験から<br class="sp-br">始めよう！</h2>
+            <h2>まずは無料体験から始めよう！</h2>
             <p style="font-size: 1.2em; margin-bottom: 30px;">定員20名・金曜日クラスの募集です<br>お早めにお申し込みください</p>
             <a href="https://forms.gle/example" class="cta-button">📝 無料体験を予約する</a>
             <p style="margin-top: 30px; font-size: 0.9em;">※フォームに移動します</p>
